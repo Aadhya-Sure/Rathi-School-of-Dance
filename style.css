@@ -22,6 +22,7 @@ body {
   background: var(--maroon);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -35,12 +36,12 @@ body {
   margin-left: 20px;
   text-decoration: none;
   font-weight: 300;
+  transition: color 0.3s ease;
 }
 
 /* HERO */
 .hero {
   height: 90vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -98,4 +99,24 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* TAB VISIBILITY LOGIC */
+.hero,
+.section {
+  display: none;
+}
+
+.hero.active {
+  display: flex;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ACTIVE NAV LINK STYLING */
+.navbar nav a.active-tab {
+  color: var(--gold);
+  font-weight: 700;
 }
