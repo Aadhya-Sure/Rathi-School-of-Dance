@@ -1,1 +1,101 @@
-body{margin:0;font-family:Arial;background:#faf7f2;color:#333}header{position:sticky;top:0;background:#6A1B1A;color:#fff}nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}ul{display:flex;gap:1rem;list-style:none}a{color:#fff;text-decoration:none}.hero{height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),#8b5;color:#fff}section{padding:4rem 10%}h2{text-align:center;color:#6A1B1A}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}.gallery div{background:#ddd;height:180px;display:flex;align-items:center;justify-content:center}form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:.75rem}input,textarea,button{padding:.8rem}footer{text-align:center;background:#6A1B1A;color:#fff;padding:1rem}
+:root {
+  --maroon: #6A1B1A;
+  --gold: #C9A227;
+  --ivory: #F8F5F0;
+  --dark: #2B1B17;
+  --white: #FFFFFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: var(--ivory);
+  color: var(--dark);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: var(--maroon);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.navbar nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+              url("assets/hero.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 48px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--gold);
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--maroon);
+  margin-bottom: 20px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.box {
+  background: #ddd;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FOOTER */
+footer {
+  background: var(--maroon);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
