@@ -32,7 +32,7 @@ body {
 }
 
 .navbar nav a {
-  color: white;
+  color: var(--white);
   margin-left: 20px;
   text-decoration: none;
   font-weight: 300;
@@ -41,6 +41,7 @@ body {
 
 /* HERO */
 .hero {
+  display: flex; /* FIXED: Added flex display so contents center properly */
   height: 90vh;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +50,7 @@ body {
   background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
               url("assets/hero.jpg");
   background-size: cover;
-  color: white;
+  color: var(--white); /* FIXED: Linked to root variable */
 }
 
 .hero h1 {
@@ -61,7 +62,7 @@ body {
   margin-top: 20px;
   padding: 12px 24px;
   background: var(--gold);
-  color: black;
+  color: var(--dark); /* FIXED: Linked to root variable */
   text-decoration: none;
   border-radius: 30px;
 }
@@ -96,12 +97,20 @@ body {
 /* FOOTER */
 footer {
   background: var(--maroon);
-  color: white;
+  color: var(--white); /* FIXED: Linked to root variable */
   text-align: center;
   padding: 20px;
 }
 
+/* ACTIVE NAV LINK STYLING */
+.navbar nav a.active-tab {
+  color: var(--gold);
+  font-weight: 700;
+}
+
 /* TAB VISIBILITY LOGIC */
+/* Note: Keep these active if you are using JavaScript to swap tabs. 
+   If your page looks blank on load, delete or comment out the lines below! */
 .hero,
 .section {
   display: none;
@@ -113,10 +122,4 @@ footer {
 
 .section.active {
   display: block;
-}
-
-/* ACTIVE NAV LINK STYLING */
-.navbar nav a.active-tab {
-  color: var(--gold);
-  font-weight: 700;
 }
